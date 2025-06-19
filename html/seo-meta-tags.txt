@@ -1,0 +1,33 @@
+// Metaetiquetas adicionales para SEO
+// Estas etiquetas pueden ser añadidas al head del documento HTML según sea necesario
+
+// Verificación de propiedad del sitio para Google Search Console
+<meta name="google-site-verification" content="CÓDIGO_DE_VERIFICACIÓN" />
+
+// Verificación de propiedad del sitio para Bing Webmaster Tools
+<meta name="msvalidate.01" content="CÓDIGO_DE_VERIFICACIÓN" />
+
+// Verificación de propiedad del sitio para Yandex Webmaster
+<meta name="yandex-verification" content="CÓDIGO_DE_VERIFICACIÓN" />
+
+// Metaetiquetas específicas para redes sociales adicionales
+// Pinterest
+<meta name="pinterest-rich-pin" content="true" />
+
+// Metaetiquetas para control de indexación específica
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+// Metaetiquetas para idioma alternativo (útil para sitios multilingües)
+<link rel="alternate" hreflang="es" href="https://www.construction-company.com/es/" />
+<link rel="alternate" hreflang="en" href="https://www.construction-company.com/en/" />
+<link rel="alternate" hreflang="x-default" href="https://www.construction-company.com/" />
+
+// Metaetiquetas para aplicaciones móviles relacionadas (si existen)
+<meta name="apple-itunes-app" content="app-id=APP_ID" />
+<meta name="google-play-app" content="app-id=PACKAGE_NAME" />
+
+// Metaetiquetas para control de caché
+<meta http-equiv="Cache-Control" content="max-age=3600" />
+
+// Nota: Reemplazar los valores en MAYÚSCULAS con los códigos reales cuando estén disponibles

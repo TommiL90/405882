@@ -1,0 +1,79 @@
+RECOMENDACIONES SEO ADICIONALES
+===============================
+
+1. OPTIMIZACIÓN DE IMÁGENES
+--------------------------
+- Comprime todas las imágenes del sitio web sin perder calidad
+- Utiliza formatos modernos como WebP con fallback a JPG/PNG
+- Asegúrate de que todas las imágenes tengan atributos alt descriptivos en español
+- Considera implementar lazy loading para mejorar el rendimiento
+
+2. OPTIMIZACIÓN DE VELOCIDAD
+---------------------------
+- Minimiza los archivos CSS y JavaScript
+- Considera implementar una estrategia de carga crítica CSS
+- Utiliza CDN para recursos estáticos
+- Implementa caché del navegador adecuadamente
+
+3. CONTENIDO SEO
+---------------
+- Crea páginas individuales para cada servicio principal en lugar de una sola página
+- Desarrolla un blog con contenido relevante sobre construcción y diseño
+- Utiliza palabras clave de cola larga en tu contenido
+- Estructura el contenido con encabezados H1, H2, H3 adecuados
+- Incluye FAQ (preguntas frecuentes) estructuradas con Schema.org
+
+4. ENLACES Y AUTORIDAD
+--------------------
+- Desarrolla una estrategia de link building con sitios relacionados
+- Crea perfiles en directorios de empresas de construcción
+- Solicita reseñas en Google My Business
+- Implementa enlaces internos entre páginas relacionadas
+
+5. SEGUIMIENTO Y ANÁLISIS
+-----------------------
+- Implementa Google Analytics 4
+- Configura Google Search Console
+- Establece objetivos de conversión
+- Monitoriza el rendimiento de palabras clave
+- Realiza auditorías SEO periódicas
+
+6. SEO LOCAL
+-----------
+- Crea y optimiza perfil de Google My Business
+- Incluye información NAP (Nombre, Dirección, Teléfono) consistente
+- Solicita reseñas a clientes satisfechos
+- Implementa Schema.org LocalBusiness con datos completos
+- Optimiza para búsquedas locales con palabras clave geográficas
+
+7. EXPERIENCIA DE USUARIO
+-----------------------
+- Mejora la experiencia móvil (diseño responsive)
+- Reduce la tasa de rebote con contenido atractivo
+- Optimiza los formularios de contacto para conversiones
+- Implementa chat en vivo para mejorar la interacción
+- Asegúrate de que la navegación sea intuitiva
+
+8. TÉCNICAS AVANZADAS
+-------------------
+- Implementa AMP (Accelerated Mobile Pages) para contenido clave
+- Considera PWA (Progressive Web App) para mejorar la experiencia móvil
+- Utiliza breadcrumbs estructurados con Schema.org
+- Implementa datos estructurados para servicios y productos
+- Optimiza para búsqueda por voz
+
+9. REDES SOCIALES
+---------------
+- Integra botones de compartir en redes sociales
+- Crea perfiles empresariales en plataformas relevantes
+- Comparte contenido regularmente
+- Utiliza Open Graph y Twitter Cards optimizados
+- Considera publicidad en redes sociales para aumentar visibilidad
+
+10. MANTENIMIENTO SEO
+-------------------
+- Programa revisiones periódicas de enlaces rotos
+- Actualiza contenido antiguo regularmente
+- Monitoriza y resuelve errores de rastreo
+- Mantén actualizado el sitemap.xml
+- Revisa y optimiza el rendimiento del sitio web
