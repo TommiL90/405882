@@ -1,0 +1,23 @@
+{
+  "name": "bm-electricidade",
+  "version": "1.0.0",
+  "description": "BM Electricidade - Eletricista em Ubatuba | Soluções Elétricas Profissionais",
+  "main": "html/index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "eletricista",
+    "ubatuba",
+    "instalação elétrica",
+    "emergência elétrica",
+    "manutenção elétrica"
+  ],
+  "author": "BM Electricidade",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+} 
