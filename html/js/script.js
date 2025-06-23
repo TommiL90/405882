@@ -13,15 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	// function scrollHeader() {
-	// 	let headerTopHeight = $('.header-top').height();
-	// 	if($(this).scrollTop() > headerTopHeight) {
-	// 		$('.header-bottom').addClass('is-fixed');
-	// 	}
-	// 	else {
-	// 		$('.header-bottom').removeClass('is-fixed');
-	// 	}
-	// }
 	function showArrowUp() {
 		if($(this).scrollTop() > 1500) {
 			$('.go-up').addClass('is-active');
@@ -79,10 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	$(window).on('scroll', function() {
-		// scrollHeader();
 		showArrowUp();
 	});
-	// scrollHeader();
 	showArrowUp();
 
 	$('.anchor-link').on('click', function () {
@@ -124,72 +113,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 	// Banner END
-
-	// Gallery START
-	$('.gallery-wrap a').magnificPopup({
-		type: 'image',
-		gallery: {
-			enabled: true
-		},
-		callbacks: {
-			beforeOpen: function() {
-				this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-				this.st.mainClass = this.st.el.attr('data-effect');
-			}
-		},
-	});
-
-	$('.gallery-btn a').on('click', function(e) {
-		e.preventDefault();
-		var galleryItem = $('.gallery-item');
-
-		if($(this).hasClass('is-active')) {
-			$(this).removeClass('is-active');
-			$(this).text('Show more');
-			galleryItem.each(function() {
-				if($(this).hasClass('is-active')) {
-					$(this).removeClass('is-active');
-					$(this).slideUp();
-				}
-			});
-		}
-		else {
-			$(this).addClass('is-active');
-			$(this).text('Hide');
-			galleryItem.each(function() {
-				if(!$(this).is(':visible')) {
-					$(this).addClass('is-active');
-					$(this).slideDown();
-				}
-			});
-		}
-	});
-	// Gallery END
-
-
-	// Reviews START
-	const reviewsSwiper = new Swiper('.reviews-swiper', {
-		speed: 1000,
-		spaceBetween: 20,
-		pagination: {
-			el: '.reviews-swiper .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-			},
-			575: {
-				slidesPerView: 2,
-			},
-			992: {
-				slidesPerView: 3,
-			},
-		  }
-	});
-	// Reviews END
-
-	
 
 })
