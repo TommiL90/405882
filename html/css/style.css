@@ -352,6 +352,8 @@ textarea::placeholder {
 /* About START */
 .s-about {
 	padding: 90px 0;
+	background-color: #1D2A3B;
+	color: #F6F6F6;
 }
 .about-row {
 	display: flex;
@@ -384,7 +386,7 @@ textarea::placeholder {
 .about-social-links p {
 	margin: 0;
 	font-size: 14px;
-	color: #6D6A6A;
+	color: #F6F6F6;
 }
 
 .about-social-links a {
