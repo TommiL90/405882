@@ -860,6 +860,7 @@ textarea::placeholder {
 }
 .why-right img {
 	display: block;
+	max-width: 550px;
 }
 /* Why END */
 
