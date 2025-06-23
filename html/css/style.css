@@ -171,7 +171,8 @@ textarea::placeholder {
 	display: flex;
 }
 .header-logo img {
-	max-width: 160px;
+	max-width: 120px;
+	height: auto;
 }
 .header-nav {
 	padding: 10px 60px;
