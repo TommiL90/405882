@@ -1901,3 +1901,28 @@ textarea::placeholder {
 	color: #222;
 	border-color: #C9E465;
 }
+
+.header-desc {
+	display: flex;
+	align-items: center;
+	column-gap: 30px;
+}
+
+.header-desc .header-info {
+	display: flex;
+	align-items: center;
+	color: #1D2A3B;
+}
+
+.header-desc .header-info img,
+.header-desc .header-social a img {
+	max-width: 28px;
+	height: 28px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.header-desc .header-info,
+.header-desc .header-social {
+	align-items: center;
+	display: flex;
+}
