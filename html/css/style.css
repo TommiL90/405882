@@ -1917,3 +1917,23 @@ textarea::placeholder {
 		column-gap: 28px;
 	}
 }
+
+.header-nav .def-btn {
+	background-color: #C32A45;
+	color: #fff;
+	border-radius: 0.75rem;
+}
+.header-nav .def-btn:hover {
+	background-color: #a81f36;
+	color: #fff;
+}
+
+.btn-red {
+	background-color: #C32A45;
+	color: #fff;
+	border-radius: 0.75rem;
+}
+.btn-red:hover {
+	background-color: #a81f36;
+	color: #fff;
+}
