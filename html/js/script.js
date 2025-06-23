@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-	// Inicializar EmailJS con tu clave pública
-	emailjs.init({
-		publicKey: "TU_CLAVE_PUBLICA", // Reemplaza con tu clave pública de EmailJS
-	});
-
 	new WOW().init();
 
 	// Header START
@@ -129,92 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 	// Banner END
-
-
-	// Services START
-	$('.services-btn').magnificPopup({
-		type: 'inline',
-		showCloseBtn: false,
-		removalDelay: 500,
-		callbacks: {
-			beforeOpen: function() {
-			   this.st.mainClass = this.st.el.attr('data-effect');
-			}
-		},
-	});
-	$('.modal-form-close').on('click', function() {
-		$.magnificPopup.close();
-	});
-
-	// Formulario de contacto principal
-	const contactForm = document.getElementById('contact-form');
-	if (contactForm) {
-		contactForm.addEventListener('submit', function(e) {
-			e.preventDefault();
-			
-			const statusDiv = this.querySelector('.form-status');
-			statusDiv.innerHTML = '<div class="loading">Enviando mensaje...</div>';
-			
-			// Preparar los parámetros para EmailJS
-			const templateParams = {
-				from_name: this.querySelector('input[name="user_name"]').value,
-				from_phone: this.querySelector('input[name="user_phone"]').value,
-				from_email: this.querySelector('input[name="user_email"]').value || 'No proporcionado',
-				message: this.querySelector('textarea[name="message"]').value || 'Sin mensaje',
-			};
-			
-			// Enviar el formulario usando EmailJS
-			emailjs.send(
-				'service_id', // Reemplaza con tu ID de servicio
-				'template_id', // Reemplaza con tu ID de plantilla
-				templateParams
-			).then(function() {
-				statusDiv.innerHTML = '<div class="success">¡Mensaje enviado con éxito!</div>';
-				contactForm.reset();
-				setTimeout(() => {
-					statusDiv.innerHTML = '';
-				}, 5000);
-			}, function(error) {
-				statusDiv.innerHTML = '<div class="error">Error al enviar el mensaje. Por favor, intente nuevamente.</div>';
-				console.error('Error de EmailJS:', error);
-			});
-		});
-	}
-
-	// Formulario modal
-	const modalForm = document.getElementById('modal-contact-form');
-	if (modalForm) {
-		modalForm.addEventListener('submit', function(e) {
-			e.preventDefault();
-			
-			const statusDiv = this.querySelector('.form-status');
-			statusDiv.innerHTML = '<div class="loading">Enviando mensaje...</div>';
-			
-			// Preparar los parámetros para EmailJS
-			const templateParams = {
-				from_name: this.querySelector('input[name="user_name"]').value,
-				from_phone: this.querySelector('input[name="user_phone"]').value,
-			};
-			
-			// Enviar el formulario usando EmailJS
-			emailjs.send(
-				'service_id', // Reemplaza con tu ID de servicio
-				'template_id', // Reemplaza con tu ID de plantilla
-				templateParams
-			).then(function() {
-				statusDiv.innerHTML = '<div class="success">¡Mensaje enviado con éxito!</div>';
-				modalForm.reset();
-				setTimeout(() => {
-					statusDiv.innerHTML = '';
-					$.magnificPopup.close();
-				}, 3000);
-			}, function(error) {
-				statusDiv.innerHTML = '<div class="error">Error al enviar el mensaje. Por favor, intente nuevamente.</div>';
-				console.error('Error de EmailJS:', error);
-			});
-		});
-	}
-	// Services END
 
 	// Gallery START
 	$('.gallery-wrap a').magnificPopup({
