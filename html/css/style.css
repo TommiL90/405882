@@ -463,6 +463,14 @@ textarea::placeholder {
 .services-title {
 	font-size: 20px;
 	margin-bottom: 10px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-height: 48px;
+	line-height: 1.2;
+	height: 2.4em;
 }
 .services-desc {
 	margin-bottom: 15px;
