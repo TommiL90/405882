@@ -115,6 +115,42 @@ document.addEventListener('DOMContentLoaded', () => {
 			type: 'bullets',
 			clickable: true,
 		},
+		on: {
+			slideChange: function () {
+				// Ocultar todos los elementos de texto en el slide activo
+				const activeSlide = this.slides[this.activeIndex];
+				const textElements = activeSlide.querySelectorAll('.banner-subtitle, .banner-title');
+				
+				textElements.forEach(element => {
+					element.style.opacity = '0';
+					element.style.visibility = 'hidden';
+				});
+				
+				// Mostrar el subtítulo después de 1 segundo
+				setTimeout(() => {
+					const subtitle = activeSlide.querySelector('.banner-subtitle');
+					if (subtitle) {
+						subtitle.style.opacity = '1';
+						subtitle.style.visibility = 'visible';
+						subtitle.style.transition = 'opacity 0.5s ease-in';
+					}
+				}, 1000);
+				
+				// Mostrar el título después de 1.2 segundos
+				setTimeout(() => {
+					const title = activeSlide.querySelector('.banner-title');
+					if (title) {
+						title.style.opacity = '1';
+						title.style.visibility = 'visible';
+						title.style.transition = 'opacity 0.5s ease-in';
+					}
+				}, 1200);
+			},
+			init: function () {
+				// Ejecutar slideChange en la inicialización para el primer slide
+				this.emit('slideChange');
+			}
+		}
 	});
 	// Banner END
 
