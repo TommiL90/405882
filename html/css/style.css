@@ -1902,3 +1902,18 @@ textarea::placeholder {
 	color: #222;
 	border-color: #C9E465;
 }
+
+@media screen and (min-width: 769px) {
+	.header-desc .header-social a img {
+		width: 21px;
+		height: 21px;
+		object-fit: contain;
+		vertical-align: middle;
+		display: inline-block;
+	}
+	.header-desc .header-social {
+		display: flex;
+		align-items: center;
+		column-gap: 28px;
+	}
+}
