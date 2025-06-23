@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://www.bmelectricidade.com.br/sitemap.xml
+Sitemap: https://www.bmelectricidade.com.br/sitemap.xml 
