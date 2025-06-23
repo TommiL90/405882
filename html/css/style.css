@@ -1042,6 +1042,10 @@ textarea::placeholder {
 	margin-bottom: 25px;
 }
 
+.footer-logo img {
+	max-width: 150px;
+}
+
 .footer-right {
 	display: flex;
 	justify-content: space-between;
