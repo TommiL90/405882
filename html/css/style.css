@@ -358,6 +358,7 @@ textarea::placeholder {
 	margin-bottom: 30px;
 }
 .about-left {
+	flex: 1;
 	margin-right: 90px;
 	max-width: 505px;
 }
@@ -368,6 +369,30 @@ textarea::placeholder {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.about-social-links {
+	margin: 20px 0;
+	padding: 15px 0;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.about-social-links p {
+	margin: 0;
+	font-size: 14px;
+	color: #6D6A6A;
+}
+
+.about-social-links a {
+	color: #C9E465;
+	font-weight: 600;
+	transition: color 0.35s ease;
+}
+
+.about-social-links a:hover {
+	color: #1D2A3B;
+	text-decoration: underline;
 }
 /* About END */
 
