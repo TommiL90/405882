@@ -1849,3 +1849,22 @@ textarea::placeholder {
 	}
 }
 /* Responsive END */
+
+.banner-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	margin-top: 24px;
+}
+
+.banner-btn-secondary {
+	background: #fff;
+	color: #222;
+	border: 2px solid #C9E465;
+	transition: background 0.2s, color 0.2s;
+}
+.banner-btn-secondary:hover {
+	background: #C9E465;
+	color: #222;
+	border-color: #C9E465;
+}
