@@ -422,10 +422,11 @@ textarea::placeholder {
 	width: 33.3%;
 	height: 100%;
 }
+
 .services-thumb img {
 	display: block;
 	width: 100%;
-	height: 100%;
+	height: 150px;
 	object-fit: cover;
 }
 .services-body {
