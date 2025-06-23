@@ -102,6 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		speed: 1000,
 		spaceBetween: 0,
 		autoHeight: true,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
 		navigation: {
 			nextEl: '.banner-swiper .swiper-button-next',
 			prevEl: '.banner-swiper .swiper-button-prev',
