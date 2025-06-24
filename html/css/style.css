@@ -249,7 +249,7 @@ textarea::placeholder {
 	background-position: center top;
 	background-size: cover;
 	background-repeat: no-repeat;
-	min-height: 640px;
+	min-height: 80dvh;
 }
 .banner-swiper .swiper-slide::before {
 	content: '';
