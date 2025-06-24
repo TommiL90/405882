@@ -1569,6 +1569,16 @@ textarea::placeholder {
 
 @media screen and (max-width: 768px) {
 
+	/* Ocultar todos los elementos de contacto en el header móvil */
+	.header-info {
+		display: none;
+	}
+	
+	/* Ocultar iconos sociales en el header móvil principal */
+	.header-social {
+		display: none;
+	}
+
 	/* All styles 768 START */
 	.def-title {
 		font-size: 32px;
@@ -1674,9 +1684,14 @@ textarea::placeholder {
 	.header-mobile-info img {
 		margin-right: 12px;
 	}
+	
+	.header-mobile-info img[src*="email-icon"] {
+		width: 20px;
+		height: auto;
+	}
 	.header-mobile-social {
-		margin-top: 40px;
 		display: flex;
+		margin-top: 40px;
 		justify-content: center;
 		column-gap: 28px;
 	}
