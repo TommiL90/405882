@@ -1688,6 +1688,7 @@ textarea::placeholder {
 	.header-mobile-info img[src*="email-icon"] {
 		width: 20px;
 		height: auto;
+		filter: brightness(0) invert(1);
 	}
 	.header-mobile-social {
 		display: flex;
