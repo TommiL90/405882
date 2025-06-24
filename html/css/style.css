@@ -1692,7 +1692,8 @@ textarea::placeholder {
 		row-gap: 20px;
 	}
 	.services-item {
-		width: calc(50% - 10px);
+		width: calc(50% - 5px);
+		margin: 0 auto;
 	}
 	/* Services 768 END */
 
@@ -1829,7 +1830,9 @@ textarea::placeholder {
 		justify-content: center;
 	}
 	.services-item {
-		width: 250px;
+		width: 90%;
+		max-width: 320px;
+		margin: 0 auto;
 	}
 	/* Services 575 END */
 
