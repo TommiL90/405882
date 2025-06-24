@@ -117,6 +117,8 @@ textarea::placeholder {
 .header-row {
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
+	gap: 30px;
 }
 .header-right {
 	display: flex;
