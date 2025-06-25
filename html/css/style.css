@@ -286,15 +286,22 @@ textarea::placeholder {
 	text-transform: uppercase;
 	margin-bottom: 15px;
 	font-weight: 600;
+	transition: opacity 0.5s ease-in;
+	opacity: 0;
+	visibility: hidden;
 }
 .banner-title {
 	font-size: 56px;
 	font-weight: 600;
 	line-height: 1.2;
+	transition: opacity 0.5s ease-in;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .banner-title strong {
 	font-weight: 700;
+	transition: opacity 0.5s ease-in;
 }
 .swiper-button-next {
 	right: 40px;

@@ -117,6 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 		on: {
 			slideChange: function () {
+				// Detectar si es un dispositivo móvil
+				const isMobile = window.innerWidth < 768;
+				
 				// Ocultar todos los elementos de texto en el slide activo
 				const activeSlide = this.slides[this.activeIndex];
 				const textElements = activeSlide.querySelectorAll('.banner-subtitle, .banner-title');
@@ -126,7 +129,39 @@ document.addEventListener('DOMContentLoaded', () => {
 					element.style.visibility = 'hidden';
 				});
 				
-				// Mostrar el subtítulo después de 1 segundo
+				// Preparar el título y sus elementos strong
+				const title = activeSlide.querySelector('.banner-title');
+				if (title) {
+					// En móviles, aseguramos que todo el título se trate como una unidad
+					if (isMobile) {
+						// Ocultar todo el contenido del título inicialmente
+						title.style.opacity = '0';
+						title.style.visibility = 'hidden';
+						title.style.transition = 'opacity 0.5s ease-in';
+						
+						// Asegurar que los elementos strong tengan la misma transición
+						const strongElements = title.querySelectorAll('strong');
+						strongElements.forEach(strong => {
+							strong.style.opacity = '1'; // Mantener visible dentro del título
+							strong.style.visibility = 'visible';
+							strong.style.transition = 'none'; // Sin transición independiente
+						});
+					} else {
+						// En pantallas grandes, podemos mantener el comportamiento original
+						const strongElements = title.querySelectorAll('strong');
+						strongElements.forEach(strong => {
+							strong.style.opacity = '0';
+							strong.style.visibility = 'hidden';
+							strong.style.transition = 'opacity 0.5s ease-in';
+						});
+					}
+				}
+				
+				// Definir tiempos de transición según el dispositivo
+				const subtitleDelay = isMobile ? 800 : 1000;
+				const titleDelay = isMobile ? 1000 : 1200;
+				
+				// Mostrar el subtítulo
 				setTimeout(() => {
 					const subtitle = activeSlide.querySelector('.banner-subtitle');
 					if (subtitle) {
@@ -134,17 +169,26 @@ document.addEventListener('DOMContentLoaded', () => {
 						subtitle.style.visibility = 'visible';
 						subtitle.style.transition = 'opacity 0.5s ease-in';
 					}
-				}, 1000);
+				}, subtitleDelay);
 				
-				// Mostrar el título después de 1.2 segundos
+				// Mostrar el título completo
 				setTimeout(() => {
 					const title = activeSlide.querySelector('.banner-title');
 					if (title) {
+						// Mostrar todo el título como una unidad
 						title.style.opacity = '1';
 						title.style.visibility = 'visible';
-						title.style.transition = 'opacity 0.5s ease-in';
+						
+						// En pantallas grandes, también animamos los strong individualmente
+						if (!isMobile) {
+							const strongElements = title.querySelectorAll('strong');
+							strongElements.forEach(strong => {
+								strong.style.opacity = '1';
+								strong.style.visibility = 'visible';
+							});
+						}
 					}
-				}, 1200);
+				}, titleDelay);
 			},
 			init: function () {
 				// Ejecutar slideChange en la inicialización para el primer slide
