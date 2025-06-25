@@ -76,6 +76,14 @@ textarea::placeholder {
 	display: block;
 	margin: 15px auto 0 auto;
 }
+
+.title-icon {
+	height: 42px;
+	width: auto;
+	margin-right: 15px;
+	vertical-align: middle;
+} 
+
 .color-white {
 	color: #fff;
 }
