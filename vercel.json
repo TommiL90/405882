@@ -7,22 +7,22 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/robots.txt",
-      "dest": "/html/robots.txt"
+      "source": "/robots.txt",
+      "destination": "/html/robots.txt"
     },
     {
-      "src": "/sitemap.xml",
-      "dest": "/html/sitemap.xml"
+      "source": "/sitemap.xml",
+      "destination": "/html/sitemap.xml"
     },
     {
-      "src": "/",
-      "dest": "/html/index.html"
+      "source": "/",
+      "destination": "/html/index.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/html/$1"
+      "source": "/(.*)",
+      "destination": "/html/$1"
     }
   ],
   "headers": [
