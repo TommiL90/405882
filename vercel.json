@@ -1,12 +1,6 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "builds": [
-    {
-      "src": "html/**",
-      "use": "@vercel/static"
-    }
-  ],
   "rewrites": [
     {
       "source": "/robots.txt",
@@ -17,17 +11,37 @@
       "destination": "/html/sitemap.xml"
     },
     {
+      "source": "/images/(.*)",
+      "destination": "/html/images/$1"
+    },
+    {
+      "source": "/css/(.*)",
+      "destination": "/html/css/$1"
+    },
+    {
+      "source": "/js/(.*)",
+      "destination": "/html/js/$1"
+    },
+    {
+      "source": "/fonts/(.*)",
+      "destination": "/html/fonts/$1"
+    },
+    {
       "source": "/",
       "destination": "/html/index.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/(.*\\.(html|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|otf|css|js|txt|xml))",
       "destination": "/html/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/html/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/html/(.*)",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -48,7 +62,7 @@
       ]
     },
     {
-      "source": "/html/images/(.*)",
+      "source": "/images/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -57,7 +71,7 @@
       ]
     },
     {
-      "source": "/html/(css|js|fonts)/(.*)",
+      "source": "/(css|js|fonts)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -65,6 +79,5 @@
         }
       ]
     }
-  ],
-  "outputDirectory": "html"
+  ]
 }
