@@ -1,6 +1,12 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "builds": [
+    {
+      "src": "html/**",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     {
       "source": "/robots.txt",
@@ -79,5 +85,6 @@
         }
       ]
     }
-  ]
+  ],
+  "outputDirectory": "html"
 }
