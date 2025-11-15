@@ -1,6 +1,12 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "builds": [
+    {
+      "src": "html/**",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     {
       "source": "/robots.txt",
@@ -11,31 +17,15 @@
       "destination": "/html/sitemap.xml"
     },
     {
-      "source": "/images/(.*)",
-      "destination": "/html/images/$1"
-    },
-    {
-      "source": "/css/(.*)",
-      "destination": "/html/css/$1"
-    },
-    {
-      "source": "/js/(.*)",
-      "destination": "/html/js/$1"
-    },
-    {
-      "source": "/fonts/(.*)",
-      "destination": "/html/fonts/$1"
-    },
-    {
       "source": "/",
       "destination": "/html/index.html"
     },
     {
-      "source": "/(.*\\.(html|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|otf|css|js|txt|xml))",
-      "destination": "/html/$1"
+      "source": "/:path*.:ext",
+      "destination": "/html/:path*.:ext"
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/html/index.html"
     }
   ],
@@ -79,5 +69,6 @@
         }
       ]
     }
-  ]
+  ],
+  "outputDirectory": "html"
 }
