@@ -1,12 +1,6 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "builds": [
-    {
-      "src": "html/**",
-      "use": "@vercel/static"
-    }
-  ],
   "rewrites": [
     {
       "source": "/robots.txt",
@@ -21,13 +15,17 @@
       "destination": "/html/index.html"
     },
     {
-      "source": "/(.*)",
-      "destination": "/html/$1"
+      "source": "/:path*.:ext",
+      "destination": "/html/:path*.:ext"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/html/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/html/(.*)",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -48,7 +46,7 @@
       ]
     },
     {
-      "source": "/html/images/(.*)",
+      "source": "/images/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -57,7 +55,7 @@
       ]
     },
     {
-      "source": "/html/(css|js|fonts)/(.*)",
+      "source": "/(css|js|fonts)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
